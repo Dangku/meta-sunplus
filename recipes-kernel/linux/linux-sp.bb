@@ -28,7 +28,7 @@ S = "${WORKDIR}/git"
 #SRC_URI[sha256sum] = "5175e47af246a37ab51ddcb5abf95406a66e74fb9df9075cdc6b2d8ad2399adc"
 #SRC_URI = "ftp://dangku:123456@localhost/linux-sp.tar.xz"
 
-SRCREV = "eb071d79590a5895204d2a267fdf990cb521cb68"
+SRCREV = "760fed175342be6cbbb9fa1d96d05951ddd32275"
 SRC_URI = "git://github.com/Dangku/linux-sp.git;branch=master"
 
 FILES_${KERNEL_PACKAGE_NAME}-base_append = " ${nonarch_base_libdir}/modules/${KERNEL_VERSION}/modules.builtin.modinfo"
