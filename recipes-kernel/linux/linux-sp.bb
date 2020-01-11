@@ -16,19 +16,11 @@ DEPENDS += "rsync-native"
 # Pull in the devicetree files into the rootfs
 RDEPENDS_${KERNEL_PACKAGE_NAME}-base += "kernel-devicetree"
 
-#KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
-
-PV = "4.19.37"
+SRCREV = "${AUTOREV}"
+PV = "4.19.37+git${SRCPV}"
 PR = "r1"
 S = "${WORKDIR}/git"
 
-# local test
-#S = "${WORKDIR}/linux-sp"
-#SRC_URI[md5sum] = "c82681d3d6a2cb74b785466d983a6acd"
-#SRC_URI[sha256sum] = "5175e47af246a37ab51ddcb5abf95406a66e74fb9df9075cdc6b2d8ad2399adc"
-#SRC_URI = "ftp://dangku:123456@localhost/linux-sp.tar.xz"
-
-SRCREV = "760fed175342be6cbbb9fa1d96d05951ddd32275"
 SRC_URI = "git://github.com/Dangku/linux-sp.git;branch=master"
 
 FILES_${KERNEL_PACKAGE_NAME}-base_append = " ${nonarch_base_libdir}/modules/${KERNEL_VERSION}/modules.builtin.modinfo"
