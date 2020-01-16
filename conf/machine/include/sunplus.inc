@@ -1,8 +1,9 @@
 SOC_FAMILY ??= ""
 include conf/machine/include/soc-family.inc
 
+#xf86-video-fbturbo
 XSERVER = "xserver-xorg \
-           xf86-video-fbturbo \
+           xf86-video-fbdev \
            xf86-input-evdev \
            xf86-input-mouse \
            xf86-input-keyboard"
